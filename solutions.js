@@ -13,6 +13,9 @@ const staircase = function (n) {
   return rows.join("\n");
 };
 
+const result1 = staircase(6);
+// console.log(result1);
+
 // ============================================================
 // Problem 2: Grading Students
 // Approach: grades < 38 are untouched. Otherwise find the next multiple
@@ -26,6 +29,9 @@ const gradingStudents = function (grades) {
     return next - g < 3 ? next : g;
   });
 };
+
+const result2 = gradingStudents([4, 73, 38, 33]);
+// console.log(result2);
 
 // ============================================================
 // Problem 3: Time Conversion
@@ -42,6 +48,9 @@ const timeConversion = function (s) {
   return String(h).padStart(2, "0") + ":" + mm + ":" + ss;
 };
 
+const result3 = timeConversion("07:05:45PM");
+// console.log(result3);
+
 // ============================================================
 // Problem 4: String Repeat
 // Approach: append s to the result n times in a loop (n = 0 gives "").
@@ -52,6 +61,9 @@ const repeatStr = function (n, s) {
   return result;
 };
 
+const result4 = repeatStr(3, "abc");
+// console.log(result4);
+
 // ============================================================
 // Problem 5: Reversed Strings
 // Approach: Array.from splits by code point (so emoji / surrogate pairs are
@@ -60,6 +72,9 @@ const repeatStr = function (n, s) {
 const solution = function (str) {
   return Array.from(str).reverse().join("");
 };
+
+const result5 = solution("hello");
+// console.log(result5);
 
 // ============================================================
 // Problem 6: Sum of Positive
@@ -72,6 +87,9 @@ const positiveSum = function (arr) {
   return sum;
 };
 
+const result6 = positiveSum([1, 2, 3, 4, 5]);
+// console.log(result6);
+
 // ============================================================
 // Problem 7: Grasshopper — Summation
 // Approach: closed-form Gauss formula n * (n + 1) / 2 instead of looping.
@@ -80,6 +98,9 @@ const summation = function (num) {
   return (num * (num + 1)) / 2;
 };
 
+const result7 = summation(8);
+// console.log(result7);
+
 // ============================================================
 // Problem 8: Convert a Boolean to a String
 // Approach: ternary returning the literal strings "true" / "false".
@@ -87,6 +108,9 @@ const summation = function (num) {
 const booleanToString = function (b) {
   return b ? "true" : "false";
 };
+
+const result8 = booleanToString(true);
+// console.log(result8);
 
 // ============================================================
 // Problem 9: Fizz Buzz
@@ -104,6 +128,9 @@ const fizzBuzz = function (n) {
   return out;
 };
 
+const result9 = fizzBuzz(15);
+// console.log(result9);
+
 // ============================================================
 // Problem 10: Running Sum of 1D Array
 // Approach: keep an accumulator; out[i] = sum of nums[0..i].
@@ -118,6 +145,9 @@ const runningSum = function (nums) {
   return out;
 };
 
+const result10 = runningSum([1, 2, 3, 4]);
+// console.log(result10);
+
 // ============================================================
 // Problem 11: Richest Customer Wealth
 // Approach: sum each customer's row and track the maximum total seen.
@@ -131,6 +161,9 @@ const maximumWealth = function (accounts) {
   }
   return max;
 };
+
+const result11 = maximumWealth([[1, 2, 3], [3, 2, 1]]);
+// console.log(result11);
 
 // ============================================================
 // Problem 12: Remove Duplicates from Sorted Array
@@ -150,6 +183,9 @@ const removeDuplicates = function (nums) {
   return k;
 };
 
+const result12 = removeDuplicates([1, 1, 2]);
+// console.log(result12);
+
 // ============================================================
 // Problem 13: Contains Duplicate
 // Approach: walk the array with a Set; if a value is already in the Set,
@@ -163,6 +199,9 @@ const containsDuplicate = function (nums) {
   }
   return false;
 };
+
+const result13 = containsDuplicate([1, 2, 3, 1]);
+// console.log(result13);
 
 // ============================================================
 // Problem 14: Move Zeroes
@@ -184,6 +223,9 @@ const moveZeroes = function (nums) {
   }
 };
 
+const result14 = moveZeroes([0, 1, 0, 3, 12]);
+// console.log(result14);
+
 // ============================================================
 // Problem 15: Merge Sorted Array
 // Approach: merge from the BACK so we never overwrite unread values of nums1.
@@ -202,6 +244,9 @@ const merge = function (nums1, m, nums2, n) {
     }
   }
 };
+
+const result15 = merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3);
+// console.log(result15);
 
 // ============================================================
 // Problem 16: 3Sum
@@ -237,6 +282,9 @@ const threeSum = function (nums) {
   return res;
 };
 
+const result16 = threeSum([-1, 0, 1, 2, -1, -4]);
+// console.log(result16);
+
 // ============================================================
 // Problem 17: Plus One
 // Approach: scan from the least significant digit. A digit < 9 just increments
@@ -256,6 +304,9 @@ const plusOne = function (digits) {
   return out;
 };
 
+const result17 = plusOne([1, 2, 3]);
+// console.log(result17);
+
 // ============================================================
 // Problem 18: Reverse String
 // Approach: two pointers from both ends, swapping until they meet.
@@ -271,6 +322,9 @@ const reverseString = function (s) {
     r--;
   }
 };
+
+const result18 = reverseString(["h", "e", "l", "l", "o"]);
+// console.log(result18);
 
 // ============================================================
 // Problem 19: Length of Last Word
@@ -288,6 +342,9 @@ const lengthOfLastWord = function (s) {
   }
   return len;
 };
+
+const result19 = lengthOfLastWord("Hello World");
+// console.log(result19);
 
 // ============================================================
 // Problem 20: Longest Common Prefix
@@ -307,3 +364,6 @@ const longestCommonPrefix = function (strs) {
   }
   return first;
 };
+
+const result20 = longestCommonPrefix(["flower", "flow", "flight"]);
+// console.log(result20);
